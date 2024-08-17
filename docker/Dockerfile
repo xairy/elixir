@@ -25,6 +25,7 @@ RUN mkdir -p /srv/elixir-data/
 RUN git config --system --add safe.directory '*'
 
 RUN \
+  rm /etc/apache2/conf-available/other-vhosts-access-log.conf && \
   rm /etc/apache2/sites-available/000-default.conf && \
   ln -s /usr/local/elixir/docker/000-default.conf /etc/apache2/sites-available/000-default.conf
 
