@@ -19,13 +19,12 @@ RUN \
     libyaml-0-2 \
     wget
 
-COPY . /usr/local/elixir/
-
+RUN mkdir -p /usr/local/elixir/
 RUN mkdir -p /srv/elixir-data/
 
-# apache elixir config, see elixir README
-# make apache less stricter about cgitb spam headers
-COPY ./docker/000-default.conf /etc/apache2/sites-available/000-default.conf
+RUN \
+  rm /etc/apache2/sites-available/000-default.conf && \
+  ln -s /usr/local/elixir/docker/000-default.conf /etc/apache2/sites-available/000-default.conf
 
 RUN a2enmod cgi rewrite
 
