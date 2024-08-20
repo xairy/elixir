@@ -148,7 +148,7 @@ function offsetAnchor(e) {
     var el = document.querySelector(location.hash)
     if (el) {
       var offsetTop = el.offsetTop
-      wrapper.scrollTop = offsetTop < 100 ? 200 : offsetTop + 100
+      wrapper.scrollTop = offsetTop < 100 ? 0 : offsetTop - 50
     }
   }
 }

@@ -75,7 +75,7 @@
 header.header {
 }
 header.header h2 {
-    margin-bottom: 3rem;
+    margin-bottom: -2.5rem;
 }
 .icon-googleplus:before,
 .icon-mastodon:before {

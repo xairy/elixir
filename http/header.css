@@ -1,10 +1,10 @@
 .header {
-  height: 200px;
+  height: 70px;
   background: #6D7DD2;
   background-image: url('/img/2penguins.svg');
   background-repeat: no-repeat;
-  background-size: 300px;
-  background-position: bottom -82px right;
+  background-size: 100px;
+  background-position: bottom -28px right;
 }
 
 .header {
@@ -114,9 +114,9 @@
 
 /* responsive */
 
-@media (max-width: 748px) {
+@media (max-width: 400px) {
   .header .social-icons {
-    position: static;
+    display: none;
   }
   .social-icons a::before {
     font-size: 1.5rem;
