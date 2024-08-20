@@ -778,17 +778,20 @@ h2 {
   outline-style: dotted;
   outline-offset: -1px;
 }
-.highlight pre {
+.code pre {
   padding-left: 1em;
 }
+.code div {
+  height: 100%;
+}
 
-.highlight a {
+.code a {
   color: inherit;
   font-weight: 700;
   background: linear-gradient(to bottom, #0000 10%, #f4f6ff 10%, #f4f6ff 90%, #0000 90%);
   border-radius: 0.2em;
 }
-.highlight a:hover {
+.code a:hover {
   border-bottom: 1px dotted #000;
 }
 
