@@ -29,6 +29,11 @@ RUN \
   rm /etc/apache2/sites-available/000-default.conf && \
   ln -s /usr/local/elixir/docker/000-default.conf /etc/apache2/sites-available/000-default.conf
 
+RUN \
+  printf '%s\n' 'user:$apr1$mvUnRM6A$NLdiRtwlMWZ/ORifk/YmO1' > /etc/apache2/.htpasswd && \
+  chown root:www-data /etc/apache2/.htpasswd && \
+  chmod 640 /etc/apache2/.htpasswd
+
 RUN a2enmod cgi rewrite
 
 EXPOSE 80
